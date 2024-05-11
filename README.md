@@ -5,6 +5,10 @@
 <img src="assets/tela_inicial.png">
 <img src="assets/tela_pos_prompt.png">
 
+
+https://github.com/VitorSVNascimento/Convert-prompts-to-cards/assets/82065313/8b7e4481-a718-4b19-97c8-52bc1a410746
+
+
 # Como rodar localmente
 ## Pré requisitos 
 - Python versão 3.11.5
