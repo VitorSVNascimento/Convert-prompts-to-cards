@@ -12,10 +12,6 @@ def index():
     """
     return render_template('index.html')
 
-@server.app.route('/tasks',methods=['GET'])
-def get_tasks():
-    return make_response(JSON_LIST)
-
 @server.app.route('/generate',methods=['POST'])
 def tasks():
     data = request.get_json()
@@ -23,8 +19,8 @@ def tasks():
     user_prompt = data.get('prompt')
     user_prompt = user_prompt.strip()
     user_api = data.get('api').strip()
-    if(len(user_prompt) == 0):
-        return make_response("O prompt não pode estar vazio",400)
+    if(len(user_prompt) == 0 or len(user_api) == 0):
+        return make_response("O prompt ou a API estão vazios",400)
     gemini = Gemini(user_prompt,user_api)
     card_list = convert_response_to_dict_list(gemini.generate())
 
