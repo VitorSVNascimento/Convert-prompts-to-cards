@@ -1,4 +1,4 @@
-export type Status = 'todo' | 'in-progress' | 'done'
+export type Status = 'a fazer' | 'em andamento' | 'feito'
 export type Priority = 'low' | 'medium' | 'high'
 export type Task = {
   title: string,
@@ -8,5 +8,5 @@ export type Task = {
   points?: number
 }
 
-export const statuses: Status[] = ['todo', 'in-progress', 'done']
+export const statuses: Status[] = ['a fazer', 'em andamento', 'feito']
 export const priorities: Priority[] = ['low', 'medium', 'high']

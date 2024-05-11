@@ -12,6 +12,10 @@ def index():
     """
     return render_template('index.html')
 
+@server.app.route('/tasks',methods=['GET'])
+def get_tasks():
+    return make_response(JSON_LIST)
+
 @server.app.route('/generate',methods=['POST'])
 def tasks():
     data = request.get_json()
